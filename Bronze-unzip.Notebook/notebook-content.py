@@ -60,9 +60,18 @@ def extract_zip(zip_path, extract_to):
     
     extract_to = Path(extract_to)
     extract_to.mkdir(parents=True, exist_ok=True)
-    
+    extracted = []
+    skipped = []
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(extract_to)
+        for member in zip_ref.namelist():
+            # skip directory entries
+            if member.endswith('/'):
+                continue
+            if member.lower().endswith('.csv'):
+                zip_ref.extract(member, extract_to)
+                extracted.append(member)
+            else:
+                skipped.append(member)
     
     print(f"✓ Extracted to: {extract_to}")
     print(f"  Files: {len(zip_ref.namelist())}")
