@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Bronze-unzip"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "24857050-718b-ac47-47b9-a74c2e7e2aae"
+  }
+}

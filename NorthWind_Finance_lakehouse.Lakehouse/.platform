@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "NorthWind_Finance_lakehouse"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1c331796-2e62-a71d-41cb-1a6d7d2a1f3b"
+  }
+}
